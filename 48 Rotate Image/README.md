@@ -8,19 +8,20 @@ You have to rotate the image in-place, which means you have to modify the input 
 
 Example 1:
 
-Given input matrix = 
+Given input matrix = <code>
 [
   [1,2,3],
   [4,5,6],
   [7,8,9]
 ],
-
-rotate the input matrix in-place such that it becomes:
+</code>
+rotate the input matrix in-place such that it becomes:<code>
 [
   [7,4,1],
   [8,5,2],
   [9,6,3]
 ]
+</code>
 Example 2:
 
 Given input matrix =
@@ -39,8 +40,8 @@ rotate the input matrix in-place such that it becomes:
   [16, 7,10,11]
 ]
 
-
-
+<br/>
+<code>
 here give a common method to solve the image rotation problems.
 
 /*
@@ -73,6 +74,7 @@ void anti_rotate(vector<vector<int> > &matrix) {
     }
 }
 
+</code>
 
 
 
