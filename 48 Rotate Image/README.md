@@ -8,20 +8,19 @@ You have to rotate the image in-place, which means you have to modify the input 
 
 Example 1:
 
-Given input matrix = <code>
+Given input matrix = 
 [
   [1,2,3],
   [4,5,6],
   [7,8,9]
 ],
-</code>
-rotate the input matrix in-place such that it becomes:<code>
+
+rotate the input matrix in-place such that it becomes:
 [
   [7,4,1],
   [8,5,2],
   [9,6,3]
 ]
-</code>
 Example 2:
 
 Given input matrix =
@@ -40,41 +39,7 @@ rotate the input matrix in-place such that it becomes:
   [16, 7,10,11]
 ]
 
-<br/>
-<code>
-here give a common method to solve the image rotation problems.
 
-/*
- * clockwise rotate
- * first reverse up to down, then swap the symmetry 
- * 1 2 3     7 8 9     7 4 1
- * 4 5 6  => 4 5 6  => 8 5 2
- * 7 8 9     1 2 3     9 6 3
-*/
-void rotate(vector<vector<int> > &matrix) {
-    reverse(matrix.begin(), matrix.end());
-    for (int i = 0; i < matrix.size(); ++i) {
-        for (int j = i + 1; j < matrix[i].size(); ++j)
-            swap(matrix[i][j], matrix[j][i]);
-    }
-}
-
-/*
- * anticlockwise rotate
- * first reverse left to right, then swap the symmetry
- * 1 2 3     3 2 1     3 6 9
- * 4 5 6  => 6 5 4  => 2 5 8
- * 7 8 9     9 8 7     1 4 7
-*/
-void anti_rotate(vector<vector<int> > &matrix) {
-    for (auto vi : matrix) reverse(vi.begin(), vi.end());
-    for (int i = 0; i < matrix.size(); ++i) {
-        for (int j = i + 1; j < matrix[i].size(); ++j)
-            swap(matrix[i][j], matrix[j][i]);
-    }
-}
-
-</code>
 
 
 
