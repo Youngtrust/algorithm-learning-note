@@ -31,14 +31,12 @@ class maxSlidingWindow{
   
           //remove all numbers that are smaller than current number 
           //from the tail of queue
-          while(!window.isEmpty()
-              && array[i] >= array[window.peekLast()]) {
+          while(!window.isEmpty() && array[i] >= array[window.peekLast()]) {
             window.removeLast();
           }
   
           //remove first number if it doesn't fall in the window anymore
-          if(!window.isEmpty() 
-            && window.peekFirst() <= i - window_size) {
+          if(!window.isEmpty() && window.peekFirst() <= i - window_size) {
             window.removeFirst();
           }
   
