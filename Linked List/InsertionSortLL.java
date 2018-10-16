@@ -2,9 +2,7 @@
 
 //If given linked list is 29 -> 23 -> 82 -> 11, then sorted list should be 11 -> 23 -> 29 -> 82.
 class InsertionSort{
-    public static LinkedListNode sorted_insert(
-          LinkedListNode head,
-          LinkedListNode node) {
+    public static LinkedListNode sorted_insert(LinkedListNode head,LinkedListNode node) {
   
         if (node == null) {
           return head;
