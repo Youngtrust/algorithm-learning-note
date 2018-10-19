@@ -40,19 +40,19 @@ class Solution{
 	
 	     while( i < j ) {
 
-		if (!isVowel(tab[i]))
-			i++;	
-		else {
-			while (j!=i && !isVowel(tab[j]))
+			if (!isVowel(tab[i]))
+				i++;	
+			else {
+				while (j!=i && !isVowel(tab[j]))
+					j--;
+				
+				char temp = tab[i];
+				tab[i] = tab[j];
+				tab[j] = temp;
+				i++;
 				j--;
-			
-			char temp = tab[i];
-			tab[i] = tab[j];
-			tab[j] = temp;
-			i++;
-			j--;
-		}
+			}
+			}
+			return new String(tab);
 	}
-	return new String(tab);
-}
 }
