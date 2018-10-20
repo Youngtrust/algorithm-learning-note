@@ -18,36 +18,18 @@ You may assume that you have an infinite number of each kind of coin.
 F(S)=F(S−C)+1
 
 */
-class Solution {
+
+public class Solution {
     public int coinChange(int[] coins, int amount) {
-        return first(coins, amount);
-    }
-
-    private int ans;
-    public int first(int[] coins, int amount) {
-        if (coins == null || coins.length == 0) {
-            return amount == 0 ? 1 : -1;
-        }
-        ans = amount + 1;
-        Arrays.sort(coins);
-        helper(coins, amount, 0, coins.length-1);
-        return ans == amount + 1 ? -1 : ans;
-    }
-
-
-    public void helper(int[] coins, int remain, int numCoins, int idx) {
-        int coin = coins[idx];
-        if (idx == 0) {
-            if (remain % coin == 0) {
-                this.ans = Math.min(this.ans, numCoins + remain / coin);
-            }
-        } else {
-            int k = remain / coin;
-            while (k >= 0 && numCoins + k < this.ans) {
-                /** remain will never be negative */
-                helper(coins, remain - k * coin, numCoins+k, idx-1);
-                k--;
+        int dp[] = new int[amount + 1];
+        final int INF = 0x7fffffff;
+        for (int i = 1; i <= amount; i++) dp[i] = INF;
+        for (int i = 0; i <= amount; i++) {
+            for (int j = 0; j < coins.length; j++) {
+                if (coins[j] != INF && i + coins[j] <= amount && dp[i]!= INF)
+                    dp[i + coins[j]] = Math.min(dp[i + coins[j]], dp[i] + 1);
             }
         }
+        return dp[amount] == INF ? -1 : dp[amount];
     }
 }
