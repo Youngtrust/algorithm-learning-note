@@ -42,7 +42,7 @@ class Solution {
             
         //Conquer
         int singlePath = Math.max(left.singlePath, right.singlePath) + root.val;
-        singlePath = Math.max(singlePath, 0);
+        singlePath = Math.max(singlePath, 0);//走出来和0比较 看结果
             
         int maxPath = Math.max(left.maxPath, right.maxPath);
         maxPath = Math.max(maxPath, left.singlePath + right.singlePath + root.val);
