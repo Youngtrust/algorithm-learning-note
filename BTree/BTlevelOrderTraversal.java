@@ -55,6 +55,9 @@ class Solution {
  *     TreeNode(int x) { val = x; }
  * }
  */
+
+ //O(n)
+
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         ArrayList result = new ArrayList();
