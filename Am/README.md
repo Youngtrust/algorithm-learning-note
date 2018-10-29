@@ -1,6 +1,3 @@
-
-
-
 534 Design TinyURL
 
 675 Cut Off Trees for Golf Event
