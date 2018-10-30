@@ -24,7 +24,7 @@ class Solution {
             return node;
         }
         while(node!=null){
-            if(node.val == node.val){
+            if(node.val == node.next.val){
                 node.next = node.next.next;
             }
             else{
