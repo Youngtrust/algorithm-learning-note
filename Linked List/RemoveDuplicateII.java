@@ -20,9 +20,10 @@ Output: 2->3
  */
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-        if(node == null || head.next == null){
+        if(head == null || head.next == null){
             return head;
         }
+        //访问x.next x.val 时候一定要保持 x != null
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         head = dummy;
@@ -37,7 +38,6 @@ class Solution {
             }
         }
         
-
         return dummy.next;
     }
 }
