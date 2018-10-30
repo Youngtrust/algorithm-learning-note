@@ -39,8 +39,32 @@ This tree is also valid:
  *     TreeNode(int x) { val = x; }
  * }
  */
-class Solution {
+
+class Solution{
     public TreeNode insertIntoBST(TreeNode root, int val) {
-              
+        if(root == null)
+            return new TreeNode(val);
+
+        if(root.val > val)
+            root.left = insertIntoBST(root.left, val);
+        else
+            root.right = insertIntoBST(root.right, val);
+        return root;
     }
 }
+/*
+class Solution {
+    public TreeNode insertNode(TreeNode root, TreeNode node) {
+        if (root == null) {
+            return node;
+        }
+        if (root.val > node.val) {
+            root.left = insertNode(root.left, node);
+        } else {
+            root.right = insertNode(root.right, node);
+        }
+        return root;
+    }
+}
+
+*/
