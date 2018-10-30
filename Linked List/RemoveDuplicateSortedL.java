@@ -20,6 +20,17 @@ Output: 1->2->3
  */
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-               
+        if(node == null || node.next == null){
+            return node;
+        }
+        while(node!=null){
+            if(node.val == node.val){
+                node.next = node.next.next;
+            }
+            else{
+                node = node.next;
+            }
+        }
+        return node;
     }
 }

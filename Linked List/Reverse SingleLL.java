@@ -15,6 +15,7 @@ class Reverse{
         head.next = null;
         return reversed_list;
     }
+    
     public static void main(String[] args) {
       LinkedListNode list_head = null;
       list_head = LinkedList.create_random_list(10);
