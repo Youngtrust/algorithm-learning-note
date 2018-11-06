@@ -20,6 +20,12 @@ class Solution {
         int ones = 0, twos = 0;
         for(int i = 0; i < nums.length; i++){
             ones = (ones ^ nums[i]) & ~twos;
+            /*
+            IF the set "ones" does not have A[i]
+                Add A[i] to the set "ones" if and only if its not there in set "twos"
+            ELSE
+                Remove it from the set "ones"
+            */
             twos = (twos ^ nums[i]) & ~ones;
         }
         return ones;
@@ -50,7 +56,8 @@ After this, we immediately update set "twos" as well with similar logic:
        Add A[i] to the set "twos" if and only if its not there in set "ones"
    ELSE
        Remove it from the set "twos"
-So, effectively, any number that appears a first time will be in set "ones" so it will not be added to "twos". Any number appearing a second time would have been removed from set "ones" in the previous step and will now be added to set "twos". Lastly, any number appearing a third time will simply be removed from the set "twos" and will no longer exist in either set.
+So, effectively, any number that appears a first time will be in set "ones" 
+so it will not be added to "twos". Any number appearing a second time would have been removed from set "ones" in the previous step and will now be added to set "twos". Lastly, any number appearing a third time will simply be removed from the set "twos" and will no longer exist in either set.
 
 Finally, once we are done iterating over the entire list, set "twos" would be empty and set "ones" will contain the only number that appears once.
 

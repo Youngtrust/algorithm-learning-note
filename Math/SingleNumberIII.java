@@ -20,7 +20,9 @@ public class Solution {
         }
         // Get its last set bit
         diff &= -diff;
-        
+        //diff = diff & (-diff)
+        //So a &= b; is equivalent to a = a & b;
+
         // Pass 2 :
         int[] rets = {0, 0}; // this array stores the two numbers we will return
         for (int num : nums)
