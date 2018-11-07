@@ -15,14 +15,23 @@ c = t
 */ 
 class Solution {
     public ListNode reverse(ListNode head){
-        ListNode prev = null;
-        while(head != null){
-            ListNode temp = head.next;
-            head.next = prev;
-            prev = head;
-            head = temp;
+        if(head == null || head.next == null){
+            return head;
         }
-        return prev;
+        LinkedListNode list_to_do = head.next;
+        LinkedListNode reversed_list = head;
+    
+        reversed_list.next = null;
+
+        while (list_to_do != null) {
+            LinkedListNode temp = list_to_do;
+            list_to_do = list_to_do.next;
+
+            temp.next = reversed_list;
+            reversed_list = temp;
+        }
+
+    return reversed_list;
     }
 
 } 
