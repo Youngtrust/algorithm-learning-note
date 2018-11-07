@@ -2,8 +2,6 @@
 
 675 Cut Off Trees for Golf Event
 
-
-
 146 LRU Cache
 
 438 Find All Anagrams in a String
@@ -11,8 +9,6 @@
 200 Number of Islands
 
 48 Rotate Image
-
-297 Serialize and Deserialize Binary Tree
 
 138 Copy List with Random Pointer
 
@@ -44,9 +40,6 @@
 
 155 Min Stack
 
-2 Add Two Numbers
-
-
 240 Search a 2D Matrix II
 
 234 Palindrome Linked List
@@ -54,8 +47,6 @@
 517 Super Washing Machines
 
 215 Kth Largest Element in an Array
-
-139 Word Break
 
 21 Merge Two Sorted Lists
 //------------------------------------------------------------------
