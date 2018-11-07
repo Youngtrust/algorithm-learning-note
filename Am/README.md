@@ -2,9 +2,7 @@
 
 675 Cut Off Trees for Golf Event
 
-1 Two Sum
 
-20 Valid Parentheses
 
 146 LRU Cache
 
@@ -24,11 +22,7 @@
 
 387 First Unique Character in a String
 
-121 Best Time to Buy and Sell Stock
-
 239 Sliding Window Maximum
-
-5 Longest Palindromic Substring
 
 17 Letter Combinations of a Phone Number
 
@@ -52,9 +46,6 @@
 
 2 Add Two Numbers
 
-98 Validate Binary Search Tree
-
-449 Serialize and Deserialize BST
 
 240 Search a 2D Matrix II
 
@@ -67,3 +58,88 @@
 139 Word Break
 
 21 Merge Two Sorted Lists
+//------------------------------------------------------------------
+
+Serialize and Deserialize Binary Tree
+
+Min Stack
+
+Subsets
+
+LFU
+
+Reverse Linked List
+
+Search a 2d matrix II
+
+String to Integer
+
+2Sum
+
+3Sum
+
+BT lvl order traversal
+
+Lowest Common Ancestor of BT
+
+Validate BST
+
+LL cycle
+
+Merge K sorted Lists
+
+Copy List with Random Pointer
+
+Word Break
+
+Word Ladder
+
+Word Ladder II
+
+LRU
+
+Best time to buuy and sell
+
+valid anagram
+
+Rotate image
+
+Set Matrix Zeros
+
+Merge Two Sorted List
+
+Add Two Number
+
+Longest Palidromic Sub
+
+First Unique Char
+
+Palidrome LL
+
+Sliding window Maximum
+
+Trapping Rain Water
+
+Intersection of 2 Linked lists
+
+Longest Substring without Repeating Char
+
+Number of Airplane in the sky
+
+Conis in a line II
+
+Kth smallest NUmber in sorted Matrix
+
+Gray code
+
+Valid Parentheses
+
+Letter comb
+
+Number of Islands
+
+Top K Frequent
+
+Design Twitter
+
+Partition Equal 

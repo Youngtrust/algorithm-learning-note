@@ -13,3 +13,4 @@ Trailing Number of zeros in n!
 
 O(1) check power of 2
     (x-1) & x == 0  --> x 是2的某次幂
+
