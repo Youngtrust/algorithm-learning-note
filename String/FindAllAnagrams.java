@@ -18,30 +18,44 @@ The substring with start index = 0 is "cba", which is an anagram of "abc".
 The substring with start index = 6 is "bac", which is an anagram of "abc".
 */
 
-class Solution {
-    public List<Integer> findAnagrams(String s, String p) {
-        int[] chars = new int[26];
-        List<Integer> result = new ArrayList<>();
-
-        if (s == null || p == null || s.length() < p.length())
-            return result;
-            
-        for (char c : p.toCharArray())
-            chars[c-'a']++;
-
-        int start = 0, end = 0, count = p.length();
-        // Go over the string
-        while (end < s.length()) {
-            // If the char at start appeared in p, we increase count
-            if (end - start == p.length() && chars[s.charAt(start++)-'a']++ >= 0)
-                count++;
-            // If the char at end appeared in p (since it's not -1 after decreasing), we decrease count
-            if (--chars[s.charAt(end++)-'a'] >= 0)
-                count--;
-            if (count == 0)
-                result.add(start);
+public class Solution {
+    public List<Integer> findAnagrams(String s, String t) {
+        List<Integer> result = new LinkedList<>();
+        if(t.length()> s.length()) return result;
+        Map<Character, Integer> map = new HashMap<>();
+        for(char c : t.toCharArray()){
+            map.put(c, map.getOrDefault(c, 0) + 1);
         }
-
+        int counter = map.size();
+        
+        int begin = 0, end = 0;
+        int head = 0;
+        int len = Integer.MAX_VALUE;
+        
+        
+        while(end < s.length()){
+            char c = s.charAt(end);
+            if( map.containsKey(c) ){
+                map.put(c, map.get(c)-1);
+                if(map.get(c) == 0) counter--;
+            }
+            end++;
+            
+            while(counter == 0){
+                char tempc = s.charAt(begin);
+                if(map.containsKey(tempc)){
+                    map.put(tempc, map.get(tempc) + 1);
+                    if(map.get(tempc) > 0){
+                        counter++;
+                    }
+                }
+                if(end-begin == t.length()){
+                    result.add(begin);
+                }
+                begin++;
+            }
+            
+        }
         return result;
     }
 }
