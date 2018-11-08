@@ -1,0 +1,39 @@
+就四轮，三轮coding一轮design，感觉应该划水过了. 1point3acres
+1. 59. Spiral Matrix II
+2. LC 103
+3. 设计一个亚马wishlist的数据结构， 
+就是吧product， host，guest和wishlist怎么混在一起，
+我选的用non sql来实现，讨论完了又聊了下用sql怎么设计schema，
+分享wishlist就发wishlist ID 到url里面，
+然后很简单的聊了一下如何提高performance和如何cache数据的问题，
+我就提了下用redis就行因为我也只用过redis。 
+然后大概估计了一下latency和throughput，然后讨论了一下db读写和如何隔离优化。
+讨论了一下cache的优先级选择，我就提了下LRU，用欢迎度和时间来决定cache优先级。
+就提了一下LRU是一个hashmap + linkedlist就不再问了，
+本来还想给他现场写一个LRU搞个妥帖的，结果不问了。主要就半小时，好像也没啥太多能问的。
+4. LC 53
+
+
+9:00 a.m. to 12:30 p.m.
+
+两轮国人大腿（全程中文），中间穿插一轮不知道哪里口音. 1point3acres
+
+1. Most challenging project
+LC 236. more info on 1point3acres
+
+2. Experience: project approaching to deadline
+LC 74 follow up: LC 23 -> flatten 2d array to 1d array
+
+3. Experience: project approaching to deadline
+Experience: adding more features in addition to basic ones
+LC 120
+
+) 两人，一个有经验的shadow。 给一个长string 找包含一组string 最短 substring2）一个不是这个org里的人，说这个org人手不够找他帮忙， 他想多锻炼一下以后做br，觉得互惠互利就来帮忙了。 如何让goodread 和亚麻共享书的review， 能自圆其说就好
+
+3） 一个国人大哥，用排除法觉得应该是br。 2sum（跪谢） 排序数组里面除了一个数只出现一次其他都出现两次。 求这个数。讲了算法， 没有写。. from: 1point3acres 
+4） island面积
+
+很幸运四轮都没有烙印， 面的很顺。 . From 1point 3acres bbs
+BQ真的要准备一下，每轮都三四个问题。。。。。 感觉至少一半时间都在BQ，第二轮那人感觉是照着一个list在念问题，说他也没办法， 他后来问一个问题实在想不出来例子，他说算啦算啦，我们换一个。
+
+
