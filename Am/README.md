@@ -10,10 +10,6 @@
 
 48 Rotate Image
 
-138 Copy List with Random Pointer
-
-236 Lowest Common Ancestor of a Binary Tree
-
 460 LFU Cache
 
 387 First Unique Character in a String
@@ -28,17 +24,9 @@
 
 682 Baseball Game
 
-127 Word Ladder
-
 380 Insert Delete GetRandom O(1)
 
-235 Lowest Common Ancestor of a Binary Search Tree
-
-206 Reverse Linked List
-
 23 Merge k Sorted Lists
-
-155 Min Stack
 
 240 Search a 2D Matrix II
 
@@ -47,8 +35,6 @@
 517 Super Washing Machines
 
 215 Kth Largest Element in an Array
-
-21 Merge Two Sorted Lists
 //------------------------------------------------------------------
 
 Serialize and Deserialize Binary Tree
