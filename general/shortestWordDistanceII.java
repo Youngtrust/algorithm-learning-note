@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.ArrayList;
 
 /* Design a class which receives a list of words in the constructor, 
 and implements a method that takes two words word1 and word2 
@@ -19,14 +20,14 @@ You may assume that word1 does not equal to word2, and word1 and word2 are both 
  O(M+N) M & N are length for word1 & word2
 */
 public class shortestWordDistanceII {
-    private unordered_map<String, Array<Integer>> m = new HashMap<String, Array<Integer>>();
+    private HashMap<String, ArrayList<Integer>> m = new HashMap<String, ArrayList<Integer>>();
 
-    public WordDistance(Array<String> words){
-        for(int i : words.length){
-            // push_back in c++ 
-            string currentKey = words[i];
-            if(m.get(currentKey) == null){
-                m.put(currentKey, new Array<Integer>());
+    public void WordDistance(ArrayList<String> words) {
+        for (int i = 0; i < words.size(); i++) {
+            // push_back in c++
+            String currentKey = words.get(i);
+            if (m.get(currentKey) == null) {
+                m.put(currentKey, new ArrayList<Integer>());
             }
             m.get(currentKey).add(i);
 
@@ -37,10 +38,10 @@ public class shortestWordDistanceII {
         int p1 = 0;
         int p2 = 0;
         int res = Integer.MAX_VALUE;
-        while (p1 < m[word1].length && p2 < m[word2].length) {
-            res = Math.min(res, Math.abs(m[word1][p1] - m[word2][p2]));
+        while (p1 < m.get(word1).size() && p2 < m.get(word2).size()) {
+            res = Math.min(res, Math.abs(m.get(word1).get(p1) - m.get(word2).get(p2)));
 
-            if (m[word1][p1] < m[word2][p2]) {
+            if (m.get(word1).get(p1) < m.get(word2).get(p2)) {
                 ++p1;
             } else {
                 ++p2;
