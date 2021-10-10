@@ -1,6 +1,6 @@
-// 1 6 7 13 14
-// 2 5 8 12 15
-// 3 4 9 11 16
+// 1 6 7 12 13
+// 2 5 8 11 14
+// 3 4 9 10 15
 // width: 5, height 3
 import React from "react";
 
@@ -39,19 +39,24 @@ const resTable = resArray.map((eachtr, index) => {
 });
 
 // <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <table>{resTable}</table>
-  </body>
-</html>;
-{
-  /* <table>
+
+const tableComponent = () => {
+  return (
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+      </head>
+      <body>
+        <table>{resTable}</table>
+      </body>
+    </html>
+  );
+};
+export default tableComponent;
+/* <table>
   <tr>
     <th>Month</th>
     <th>Savings</th>
@@ -61,4 +66,3 @@ const resTable = resArray.map((eachtr, index) => {
     <td>$100</td>
   </tr>
 </table> */
-}
