@@ -10,7 +10,6 @@ const range = (start, stop) =>
 const mapTable = (width, height) => {
   // map vertical first
   let arrayVertical = new Array(width);
-  console.log(arrayVertical);
   let count = 1;
 
   for (let w = 0; w < width; w++) {
@@ -26,8 +25,11 @@ const mapTable = (width, height) => {
   // [[1,2,3], [6,5,4],[7,8,9],[12,11,10]]
   return arrayVertical;
 };
+// O(2width)
+
 const resArray = mapTable(3, 5);
 
+// O(w*h)
 const resTable = resArray.map((eachtr, index) => {
   return (
     <tr>
