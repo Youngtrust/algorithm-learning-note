@@ -1,0 +1,44 @@
+/* <body> 
+ <div class='tooltip'>
+     main text
+<div class="speech-bubble">
+  bubble items. BALABALABALBABALBALBALBALBALBALBALABLABLABALBALBALBALABLABAL
+</div> 
+
+</div>
+</body>  */
+
+.speech-bubble {
+  display: none;
+  position: relative;
+  background: #00aabb;
+  border-radius: 0.4em;
+  inline-size: 150px;
+  overflow-wrap: break-word;
+  margin-top: 20px;
+}
+
+.tooltip {
+  border: 1px solid blue;
+  inline-size: 150px;
+  overflow-wrap: break-word;
+  font-size: 20px;
+}
+.tooltip:hover .speech-bubble {
+  display: block;
+}
+
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-bottom-color: #008896;
+  border-top: 0;
+  border-left: 0;
+  margin-left: -24px;
+  margin-top: -20px;
+}
