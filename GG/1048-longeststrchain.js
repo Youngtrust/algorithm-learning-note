@@ -17,14 +17,13 @@ var longestStrChain = function (words) {
       let prev = eachWord.slice(0, i) + eachWord.slice(i + 1);
       if (prev in d) {
         d[eachWord] = Math.max(d[eachWord], d[prev] + 1);
-        // console.log(eachWord, d[eachWord], d[prev]+1, Math.max(d[eachWord], d[prev]+1))
+        //console.log(eachWord, prev, d[eachWord], d[prev]+1)
 
-        // ba 1 2 2
-        // ba 2 2 2
-        // bda 1 3 3
-        // bca 1 3 3
-        // bdca 1 4 4
-        // bdca 4 4 4
+        // ba a 2 2
+        // ba b 2 2
+        // bda ba 3 3
+        // bca ba 3 3
+        // bdca bca 4 4
       }
     }
   });

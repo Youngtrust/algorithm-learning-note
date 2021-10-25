@@ -54,6 +54,12 @@ class LRUCache {
       }
       System.out.println("");
     }
+
+
+
+
+
+    
     public static void main(String[] args){
       LRUCache cache = new LRUCache(15);
       int key = 10; 
