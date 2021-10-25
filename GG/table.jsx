@@ -32,7 +32,7 @@ const resArray = mapTable(3, 5);
 // O(w*h)
 const resTable = resArray.map((eachtr, index) => {
   return (
-    <tr>
+    <tr key={index}>
       {resArray[eachtr].map((eachtd) => {
         return <td>{resArray[eachtr][eachtd]}</td>;
       })}
@@ -68,3 +68,25 @@ export default tableComponent;
     <td>$100</td>
   </tr>
 </table> */
+
+function createTable(rowCnt, colCnt) {
+  const frag = document.createDocumentFragment();
+  for (let i = 0; i < rowCnt; i++) {
+    frag.append(document.createElement("tr"));
+  }
+  for (let y = 0, inc = -1, val = 1; y < colCnt; y++) {
+    inc *= -1;
+    for (
+      let i = 0, x = y % 2 === 0 ? 0 : rowCnt - 1;
+      i < rowCnt;
+      i++, x += inc
+    ) {
+      const td = document.createElement("td");
+      td.textContent = val++;
+      frag.children[x].append(td);
+    }
+  }
+  const table = document.createElement("table");
+  table.append(frag);
+  return table;
+}

@@ -1,0 +1,54 @@
+.each-user-card-component {
+  border: 0.5px solid grey;
+  inline-size: 200px;
+  overflow-wrap: break-word;
+  margin: 10px;
+}
+
+.card-component {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.background-image {
+  height: 100px;
+  background-repeat: repeat;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.avatar-cycle-image {
+  z-index: 1;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0px 1px grey;
+}
+
+.top-right {
+  float: right;
+  background-color: transparent;
+  border: none;
+  margin: none;
+}
+
+.top-right:hover {
+  color: blue;
+  font-weight: 700;
+}
+
+.delete-btn {
+  height: 20px;
+}
